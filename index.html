@@ -14,7 +14,7 @@ var imgwidth    = 640;        // image width
 var imgheight   = 480;        // image height
 var imgalt      = "WebCam Image";
 var imgtitle    = "header=[WebCam Image] body=[WebCam Image Automatically Updated Every 30 Seconds] delay=[1000]";
-function refresh() { document.images["pic"].src = image + "?" + new Date(); setTimeout('refresh()', refreshrate * 1000); }
+function refresh() { document.images["pic"].src = image + "?"; setTimeout('refresh()', refreshrate * 1000); }
 document.write('<img src="' + image + '" alt="' + imgalt + '" title="' + imgtitle + '" name="pic" id="pic" width="' + imgwidth + '" height="' + imgheight + '" style="border: none;" />');
 if(document.images)window.onload=refresh;
 // ]]>
